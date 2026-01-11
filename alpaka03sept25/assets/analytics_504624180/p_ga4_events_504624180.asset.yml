@@ -1,0 +1,14 @@
+type: bq.source
+description: Imported table analytics_504624180.p_ga4_Events_504624180
+
+columns:
+  - name: eventName
+    type: STRING
+  - name: eventCount
+    type: INTEGER
+  - name: eventCountPerUser
+    type: FLOAT
+  - name: totalRevenue
+    type: FLOAT
+  - name: totalUsers
+    type: INTEGER

@@ -1,0 +1,38 @@
+type: bq.source
+description: Imported table analytics_504624180.p_ga4_TechDetails_504624180
+
+columns:
+  - name: appVersion
+    type: STRING
+  - name: browser
+    type: STRING
+  - name: deviceCategory
+    type: STRING
+  - name: operatingSystem
+    type: STRING
+  - name: operatingSystemVersion
+    type: STRING
+  - name: operatingSystemWithVersion
+    type: STRING
+  - name: platform
+    type: STRING
+  - name: platformDeviceCategory
+    type: STRING
+  - name: screenResolution
+    type: STRING
+  - name: activeUsers
+    type: INTEGER
+  - name: engagedSessions
+    type: INTEGER
+  - name: engagementRate
+    type: FLOAT
+  - name: eventCount
+    type: INTEGER
+  - name: keyEvents
+    type: FLOAT
+  - name: newUsers
+    type: INTEGER
+  - name: totalRevenue
+    type: FLOAT
+  - name: userEngagementDuration
+    type: FLOAT

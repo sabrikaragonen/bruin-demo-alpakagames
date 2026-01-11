@@ -1,0 +1,20 @@
+type: bq.source
+description: Imported table event_collection.session_events
+
+columns:
+  - name: user_id
+    type: STRING
+  - name: device_id
+    type: STRING
+  - name: platform
+    type: STRING
+  - name: event_timestamp
+    type: TIMESTAMP
+  - name: event_date
+    type: STRING
+  - name: app_version
+    type: STRING
+  - name: country_code
+    type: STRING
+  - name: session_id
+    type: STRING

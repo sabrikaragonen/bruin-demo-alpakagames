@@ -1,0 +1,26 @@
+type: bq.source
+description: Imported table analytics_504624180.p_ga4_PagesAndScreens_504624180
+
+columns:
+  - name: contentGroup
+    type: STRING
+  - name: unifiedPagePathScreen
+    type: STRING
+  - name: unifiedScreenClass
+    type: STRING
+  - name: unifiedScreenName
+    type: STRING
+  - name: activeUsers
+    type: INTEGER
+  - name: eventCount
+    type: INTEGER
+  - name: keyEvents
+    type: FLOAT
+  - name: screenPageViews
+    type: INTEGER
+  - name: screenPageViewsPerUser
+    type: FLOAT
+  - name: totalRevenue
+    type: FLOAT
+  - name: userEngagementDuration
+    type: FLOAT

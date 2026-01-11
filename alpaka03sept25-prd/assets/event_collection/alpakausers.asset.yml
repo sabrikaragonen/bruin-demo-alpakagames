@@ -1,0 +1,8 @@
+type: bq.source
+description: Imported table event_collection.alpakausers
+
+columns:
+  - name: userid
+    type: STRING
+  - name: name
+    type: STRING

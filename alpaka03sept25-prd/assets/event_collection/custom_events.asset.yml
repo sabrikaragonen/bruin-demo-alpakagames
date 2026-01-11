@@ -1,0 +1,34 @@
+type: bq.source
+description: Imported table event_collection.custom_events
+
+columns:
+  - name: user_id
+    type: STRING
+  - name: device_id
+    type: STRING
+  - name: platform
+    type: STRING
+  - name: event_timestamp
+    type: TIMESTAMP
+  - name: event_date
+    type: STRING
+  - name: app_version
+    type: STRING
+  - name: country_code
+    type: STRING
+  - name: game_level
+    type: STRING
+  - name: event_name
+    type: STRING
+  - name: st1
+    type: STRING
+  - name: st2
+    type: STRING
+  - name: st3
+    type: STRING
+  - name: st4
+    type: STRING
+  - name: json_field
+    type: STRING
+  - name: session_id
+    type: STRING

@@ -1,0 +1,36 @@
+type: bq.source
+description: Imported table analytics_504624180.p_ga4_UserAcquisition_504624180
+
+columns:
+  - name: firstUserCampaignName
+    type: STRING
+  - name: firstUserDefaultChannelGroup
+    type: STRING
+  - name: firstUserMedium
+    type: STRING
+  - name: firstUserPrimaryChannelGroup
+    type: STRING
+  - name: firstUserSource
+    type: STRING
+  - name: firstUserSourceMedium
+    type: STRING
+  - name: firstUserSourcePlatform
+    type: STRING
+  - name: activeUsers
+    type: INTEGER
+  - name: engagedSessions
+    type: INTEGER
+  - name: eventCount
+    type: INTEGER
+  - name: keyEvents
+    type: FLOAT
+  - name: newUsers
+    type: INTEGER
+  - name: totalRevenue
+    type: FLOAT
+  - name: totalUsers
+    type: INTEGER
+  - name: userEngagementDuration
+    type: FLOAT
+  - name: userKeyEventRate
+    type: FLOAT

@@ -1,0 +1,36 @@
+type: bq.source
+description: Imported table analytics_504624180.p_ga4_TrafficAcquisition_504624180
+
+columns:
+  - name: sessionCampaignName
+    type: STRING
+  - name: sessionDefaultChannelGroup
+    type: STRING
+  - name: sessionMedium
+    type: STRING
+  - name: sessionPrimaryChannelGroup
+    type: STRING
+  - name: sessionSource
+    type: STRING
+  - name: sessionSourceMedium
+    type: STRING
+  - name: sessionSourcePlatform
+    type: STRING
+  - name: engagedSessions
+    type: INTEGER
+  - name: engagementRate
+    type: FLOAT
+  - name: eventCount
+    type: INTEGER
+  - name: eventsPerSession
+    type: FLOAT
+  - name: keyEvents
+    type: FLOAT
+  - name: sessionKeyEventRate
+    type: FLOAT
+  - name: sessions
+    type: INTEGER
+  - name: totalRevenue
+    type: FLOAT
+  - name: userEngagementDurationPerSession
+    type: FLOAT

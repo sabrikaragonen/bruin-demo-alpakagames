@@ -1,0 +1,18 @@
+type: bq.source
+description: Imported table analytics_504624180.p_ga4_Audiences_504624180
+
+columns:
+  - name: audienceName
+    type: STRING
+  - name: averageSessionDuration
+    type: FLOAT
+  - name: newUsers
+    type: INTEGER
+  - name: screenPageViewsPerSession
+    type: FLOAT
+  - name: sessions
+    type: INTEGER
+  - name: totalRevenue
+    type: FLOAT
+  - name: totalUsers
+    type: INTEGER

@@ -1,0 +1,17 @@
+# Bruin credentials
+.bruin.yml
+keys/
+keys.json
+*.credentials.json
+*service_account*.json
+
+# Logs
+logs/
+
+# IDE
+.claude/
+.vscode/
+.idea/
+
+# OS
+.DS_Store

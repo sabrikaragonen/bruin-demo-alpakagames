@@ -1,0 +1,26 @@
+type: bq.source
+description: Imported table analytics_504624180.p_ga4_Promotions_504624180
+
+columns:
+  - name: itemListPosition
+    type: STRING
+  - name: itemPromotionCreativeName
+    type: STRING
+  - name: itemPromotionId
+    type: STRING
+  - name: itemPromotionName
+    type: STRING
+  - name: itemPromotionClickThroughRate
+    type: FLOAT
+  - name: itemRevenue
+    type: FLOAT
+  - name: itemsAddedToCart
+    type: INTEGER
+  - name: itemsCheckedOut
+    type: INTEGER
+  - name: itemsClickedInPromotion
+    type: INTEGER
+  - name: itemsPurchased
+    type: INTEGER
+  - name: itemsViewedInPromotion
+    type: INTEGER

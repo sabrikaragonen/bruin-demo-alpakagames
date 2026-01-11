@@ -1,0 +1,20 @@
+type: bq.source
+description: Imported table analytics_504624180.p_ga4_LandingPage_504624180
+
+columns:
+  - name: landingPage
+    type: STRING
+  - name: activeUsers
+    type: INTEGER
+  - name: keyEvents
+    type: FLOAT
+  - name: newUsers
+    type: INTEGER
+  - name: sessionKeyEventRate
+    type: FLOAT
+  - name: sessions
+    type: INTEGER
+  - name: totalRevenue
+    type: FLOAT
+  - name: userEngagementDurationPerSession
+    type: FLOAT

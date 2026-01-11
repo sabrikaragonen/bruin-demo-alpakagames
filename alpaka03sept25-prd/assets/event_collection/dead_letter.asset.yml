@@ -1,0 +1,10 @@
+type: bq.source
+description: Imported table event_collection.dead_letter
+
+columns:
+  - name: message
+    type: STRING
+  - name: event
+    type: STRING
+  - name: timestamp
+    type: TIMESTAMP

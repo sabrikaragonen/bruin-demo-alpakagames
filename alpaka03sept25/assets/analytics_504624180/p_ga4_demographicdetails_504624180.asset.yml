@@ -1,0 +1,36 @@
+type: bq.source
+description: Imported table analytics_504624180.p_ga4_DemographicDetails_504624180
+
+columns:
+  - name: brandingInterest
+    type: STRING
+  - name: city
+    type: STRING
+  - name: country
+    type: STRING
+  - name: language
+    type: STRING
+  - name: region
+    type: STRING
+  - name: userAgeBracket
+    type: STRING
+  - name: userGender
+    type: STRING
+  - name: activeUsers
+    type: INTEGER
+  - name: engagedSessions
+    type: INTEGER
+  - name: engagementRate
+    type: FLOAT
+  - name: eventCount
+    type: INTEGER
+  - name: keyEvents
+    type: FLOAT
+  - name: newUsers
+    type: INTEGER
+  - name: totalRevenue
+    type: FLOAT
+  - name: userEngagementDuration
+    type: FLOAT
+  - name: userKeyEventRate
+    type: FLOAT

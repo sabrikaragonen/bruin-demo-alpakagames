@@ -1,0 +1,98 @@
+name: analytics_504624180.events
+type: bq.source
+description: |
+  Firebase/GA4 raw events export. Date-sharded tables containing all user events collected from the app.
+  Tables are named events_YYYYMMDD (e.g., events_20251224). Query using wildcard: `events_*` or `events_2025*`.
+  Intraday data available in events_intraday_YYYYMMDD tables.
+
+columns:
+  - name: event_date
+    type: STRING
+    description: Date of the event in YYYYMMDD format
+  - name: event_timestamp
+    type: INTEGER
+    description: Unix timestamp in microseconds when the event was logged
+  - name: event_name
+    type: STRING
+    description: Name of the event (e.g., session_start, screen_view, purchase, custom events)
+  - name: event_params
+    type: RECORD
+    description: Array of event parameters as key-value pairs. Contains event-specific data.
+  - name: event_previous_timestamp
+    type: INTEGER
+    description: Unix timestamp of the previous event from the same user
+  - name: event_value_in_usd
+    type: FLOAT
+    description: Monetary value of the event in USD (if applicable)
+  - name: event_bundle_sequence_id
+    type: INTEGER
+    description: Sequential ID of the bundle containing this event
+  - name: event_server_timestamp_offset
+    type: INTEGER
+    description: Offset between client and server timestamp in microseconds
+  - name: user_id
+    type: STRING
+    description: Custom user ID set via setUserId() API (if implemented)
+  - name: user_pseudo_id
+    type: STRING
+    description: Firebase-generated anonymous user identifier (device-scoped)
+  - name: privacy_info
+    type: RECORD
+    description: Privacy settings for the user (analytics_storage, ads_storage consent)
+  - name: user_properties
+    type: RECORD
+    description: Array of user properties set via setUserProperty() API
+  - name: user_first_touch_timestamp
+    type: INTEGER
+    description: Unix timestamp when user first opened the app
+  - name: user_ltv
+    type: RECORD
+    description: Lifetime value info for the user (revenue, currency)
+  - name: device
+    type: RECORD
+    description: Device information (category, brand, model, os_version, language)
+  - name: geo
+    type: RECORD
+    description: Geographic information (country, region, city, continent)
+  - name: app_info
+    type: RECORD
+    description: App information (id, version, install_source, firebase_app_id)
+  - name: traffic_source
+    type: RECORD
+    description: First-touch traffic source attribution (source, medium, campaign)
+  - name: stream_id
+    type: STRING
+    description: Firebase stream ID for the data source
+  - name: platform
+    type: STRING
+    description: Platform of the app (IOS, ANDROID, WEB)
+  - name: event_dimensions
+    type: RECORD
+    description: Additional event dimensions (hostname for web)
+  - name: ecommerce
+    type: RECORD
+    description: Ecommerce transaction data (transaction_id, value, currency, shipping, tax)
+  - name: items
+    type: RECORD
+    description: Array of items associated with the event (for ecommerce events)
+  - name: collected_traffic_source
+    type: RECORD
+    description: Session-scoped traffic source from URL parameters
+  - name: is_active_user
+    type: BOOLEAN
+    description: Whether the user was active (foreground) when the event fired
+  - name: batch_event_index
+    type: INTEGER
+    description: Index of this event within the batch
+  - name: batch_page_id
+    type: INTEGER
+    description: Page ID within the batch
+  - name: batch_ordering_id
+    type: INTEGER
+    description: Ordering ID for batch processing
+  - name: session_traffic_source_last_click
+    type: RECORD
+    description: Last-click attribution for the session
+  - name: publisher
+    type: RECORD
+    description: Publisher information for ad-related events
