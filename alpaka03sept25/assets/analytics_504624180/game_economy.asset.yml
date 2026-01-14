@@ -1,0 +1,47 @@
+type: bq.source
+description: |
+  Tracks all in-game economy transactions including currency sources (earnings) and sinks (spending).
+  Contains 5 currency types (Gold, GreenGem, PurpleGem, ItemLevelUpStone, Money) and 15 transaction types
+  including level rewards, upgrades, and purchases. Source events have positive transactions (avg +1,301),
+  sink events have negative transactions (avg -708).
+
+columns:
+  - name: event_name
+    type: STRING
+    description: 'Transaction type: ''game_economy_source'' for currency earned, ''game_economy_sink'' for currency spent'
+  - name: user_id
+    type: STRING
+    description: Unique identifier for the player (UUID format)
+  - name: event_timestamp
+    type: DATE
+    description: Date when the transaction occurred
+  - name: event_timestamp_crontime
+    type: INTEGER
+    description: Unix timestamp in microseconds for precise event ordering
+  - name: install_date
+    type: DATE
+    description: Date when the user first installed the game
+  - name: version
+    type: STRING
+    description: App version at time of transaction (e.g., '0.1.6')
+  - name: operating_system_version
+    type: STRING
+    description: Device OS version (e.g., 'iOS 26.1')
+  - name: mobile_model_name
+    type: STRING
+    description: Device model name (e.g., 'iPhone', 'iPhone 15 Pro Max')
+  - name: country
+    type: STRING
+    description: User's country based on geo location
+  - name: transaction_name
+    type: STRING
+    description: 'Specific transaction type: Crate, level_win, level_fail, ItemUpgrade, weapon upgrades, Gotcha purchases, etc.'
+  - name: transaction
+    type: INTEGER
+    description: Amount of currency gained (positive) or spent (negative)
+  - name: balance
+    type: INTEGER
+    description: Currency balance after the transaction
+  - name: currency_type
+    type: STRING
+    description: 'Type of currency: Gold, GreenGem, PurpleGem, ItemLevelUpStone, or Money'

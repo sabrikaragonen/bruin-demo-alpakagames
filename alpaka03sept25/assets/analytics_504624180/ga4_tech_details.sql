@@ -1,4 +1,5 @@
 /* @bruin
+
 name: analytics_504624180.ga4_TechDetails_504624180
 type: bq.sql
 description: |
@@ -66,6 +67,7 @@ columns:
   - name: _DATA_DATE
     type: DATE
     description: Date partition of the data
+
 @bruin */
 
 SELECT

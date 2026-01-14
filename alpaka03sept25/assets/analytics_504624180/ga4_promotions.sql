@@ -1,4 +1,5 @@
 /* @bruin
+
 name: analytics_504624180.ga4_Promotions_504624180
 type: bq.sql
 description: |
@@ -15,6 +16,29 @@ columns:
   - name: _DATA_DATE
     type: DATE
     description: Date partition of the data
+  - name: itemListPosition
+    type: STRING
+  - name: itemPromotionCreativeName
+    type: STRING
+  - name: itemPromotionId
+    type: STRING
+  - name: itemPromotionName
+    type: STRING
+  - name: itemPromotionClickThroughRate
+    type: FLOAT
+  - name: itemRevenue
+    type: FLOAT
+  - name: itemsAddedToCart
+    type: INTEGER
+  - name: itemsCheckedOut
+    type: INTEGER
+  - name: itemsClickedInPromotion
+    type: INTEGER
+  - name: itemsPurchased
+    type: INTEGER
+  - name: itemsViewedInPromotion
+    type: INTEGER
+
 @bruin */
 
 SELECT

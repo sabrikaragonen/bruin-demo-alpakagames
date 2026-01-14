@@ -1,0 +1,38 @@
+type: bq.source
+description: |
+  Daily user activity fact table with event-level granularity (4.8M rows).
+  Contains one row per user event per day, spanning 30 days of data.
+  Used for calculating DAU (Daily Active Users) ranging from 100-350 users per day,
+  and analyzing user engagement patterns over time.
+
+columns:
+  - name: event_date
+    type: DATE
+    description: Date of the user activity
+  - name: event_timestamp
+    type: INTEGER
+    description: Unix timestamp in microseconds for precise event ordering
+  - name: user_id
+    type: STRING
+    description: Unique identifier for the player (UUID format)
+  - name: user_pseudo_id
+    type: STRING
+    description: Firebase/GA4 anonymous identifier (persists across sessions)
+  - name: version
+    type: STRING
+    description: App version at time of event (e.g., '0.1.4', '0.1.6')
+  - name: operating_system_version
+    type: STRING
+    description: Device OS version (e.g., 'iOS 26.1')
+  - name: mobile_brand_name
+    type: STRING
+    description: Device manufacturer (e.g., 'Apple')
+  - name: mobile_model_name
+    type: STRING
+    description: Device model (e.g., 'iPhone 15 Pro Max')
+  - name: country
+    type: STRING
+    description: User's country based on geo location
+  - name: ga_session_id
+    type: INTEGER
+    description: GA4 session identifier for grouping events within a session
