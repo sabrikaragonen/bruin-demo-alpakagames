@@ -1,19 +1,10 @@
-# Bruin credentials
 .bruin.yml
-keys/
-keys.json
-*.credentials.json
-*service_account*.json
-
-# Logs
-logs/
-
-# IDE
-.claude/
-.vscode/
-.idea/
-
-# OS
-.DS_Store
+firebase
 
 logs/queries
+logs/runs
+logs/*.log
+__pycache__/
+*.py[cod]
+logs/exports
+keys

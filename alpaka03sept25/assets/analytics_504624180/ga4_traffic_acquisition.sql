@@ -68,7 +68,7 @@ columns:
 @bruin */
 
 SELECT
-  *,
-  DATE('2026-01-10') AS _LATEST_DATE,
-  DATE(_PARTITIONTIME) AS _DATA_DATE
+    *,
+    DATE('2026-01-10') AS _LATEST_DATE,
+    DATE(_PARTITIONTIME) AS _DATA_DATE
 FROM `alpaka03sept25.analytics_504624180.p_ga4_TrafficAcquisition_504624180`
