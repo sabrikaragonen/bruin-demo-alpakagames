@@ -1,7 +1,7 @@
 /* @bruin
 
 name: analytics_504624180.ga4_PagesAndScreens_504624180
-type: bq.sql
+type: bq.source
 description: |
   GA4 pages and screens report view. Shows page/screen level engagement metrics.
   View over p_ga4_PagesAndScreens_504624180.

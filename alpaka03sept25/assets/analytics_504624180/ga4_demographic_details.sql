@@ -1,7 +1,7 @@
 /* @bruin
 
 name: analytics_504624180.ga4_DemographicDetails_504624180
-type: bq.sql
+type: bq.source
 description: |
   GA4 demographic details report view. Contains user demographics (age, gender, location)
   with engagement metrics. View over p_ga4_DemographicDetails_504624180.

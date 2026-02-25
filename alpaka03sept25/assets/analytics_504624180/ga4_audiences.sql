@@ -1,7 +1,7 @@
 /* @bruin
 
 name: analytics_504624180.ga4_Audiences_504624180
-type: bq.sql
+type: bq.source
 description: |
   GA4 audiences report view. Shows audience membership with session and revenue metrics.
   This is a view over the partitioned table p_ga4_Audiences_504624180.

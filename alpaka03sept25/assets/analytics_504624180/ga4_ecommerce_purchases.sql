@@ -1,7 +1,7 @@
 /* @bruin
 
 name: analytics_504624180.ga4_EcommercePurchases_504624180
-type: bq.sql
+type: bq.source
 description: |
   GA4 ecommerce purchases report view. Contains item-level purchase data including
   product details, revenue, and funnel metrics. View over p_ga4_EcommercePurchases_504624180.

@@ -1,7 +1,7 @@
 /* @bruin
 
 name: analytics_504624180.ga4_TrafficAcquisition_504624180
-type: bq.sql
+type: bq.source
 description: |
   GA4 traffic acquisition report view. Shows how sessions were acquired by source,
   medium, and campaign. View over p_ga4_TrafficAcquisition_504624180.

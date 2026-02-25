@@ -1,7 +1,7 @@
 /* @bruin
 
 name: analytics_504624180.ga4_UserAcquisition_504624180
-type: bq.sql
+type: bq.source
 description: |
   GA4 user acquisition report view. Shows how new users were first acquired.
   Attributes users to their original acquisition source. View over p_ga4_UserAcquisition_504624180.

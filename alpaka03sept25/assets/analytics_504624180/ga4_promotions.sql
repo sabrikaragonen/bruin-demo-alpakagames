@@ -1,7 +1,7 @@
 /* @bruin
 
 name: analytics_504624180.ga4_Promotions_504624180
-type: bq.sql
+type: bq.source
 description: |
   GA4 promotions report view. Shows promotion performance metrics.
   View over p_ga4_Promotions_504624180.

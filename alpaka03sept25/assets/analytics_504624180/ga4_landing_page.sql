@@ -1,7 +1,7 @@
 /* @bruin
 
 name: analytics_504624180.ga4_LandingPage_504624180
-type: bq.sql
+type: bq.source
 description: |
   GA4 landing page report view. Shows performance metrics by landing page.
   View over p_ga4_LandingPage_504624180.

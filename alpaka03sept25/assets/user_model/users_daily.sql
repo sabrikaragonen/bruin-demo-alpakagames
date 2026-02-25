@@ -14,6 +14,7 @@ materialization:
 
 depends:
   - events.events
+  - analytics_504624180.currency_exchange_rates
 
 columns:
   - name: user_id
@@ -71,8 +72,18 @@ SELECT
   sum(if(event_name in ("inter_paid", "interstitial_showed", "interstitial_ready", "interstitial_clicked", "interstitial_complete"), coalesce(revenue, 0), 0)) as inter_rev,
   sum(if(event_name in ("rewarded_paid", "rw_showed", "rw_clicked", "rw_completed", "rw_ready", "rw_recieved"), coalesce(revenue, 0), 0)) as rewarded_rev,
   countif(event_name in ("iap_complete_client", "iap_confirmed")) as transactions,
-  coalesce(sum(if(event_name in ("iap_complete_client", "iap_confirmed"), event_value_in_usd, 0)), 0) as iap_rev,
-  sum(coalesce(revenue, 0)) + coalesce(sum(if(event_name in ("iap_complete_client", "iap_confirmed"), event_value_in_usd, 0)), 0) as total_rev,
+  coalesce(sum(if(
+    event_name = "iap_complete_client" and e.iap_localized_price_string is not null,
+    safe_cast(trim(translate(substring(e.iap_localized_price_string, 2, 100), ',', '.')) as float64)
+      / ex.exchange_rate,
+    if(event_name in ("iap_complete_client", "iap_confirmed"), event_value_in_usd, 0)
+  )), 0) as iap_rev,
+  sum(coalesce(revenue, 0)) + coalesce(sum(if(
+    event_name = "iap_complete_client" and e.iap_localized_price_string is not null,
+    safe_cast(trim(translate(substring(e.iap_localized_price_string, 2, 100), ',', '.')) as float64)
+      / ex.exchange_rate,
+    if(event_name in ("iap_complete_client", "iap_confirmed"), event_value_in_usd, 0)
+  )), 0) as total_rev,
 
   -- Gameplay Metrics
   countif(event_name = "level_start") as level_starts,
@@ -133,8 +144,10 @@ SELECT
   array_agg({{ currency }}_balance ignore nulls order by ts desc limit 1)[safe_offset(0)] as eod_{{ currency }}_balance,
   {%- endfor %}
 
-from events.events
-where user_id is not null --TODO: change to user_pseudo_id if needed
+from events.events e
+left join `analytics_504624180.currency_exchange_rates` ex
+  on e.dt = ex.rate_date and e.iap_iso_currency_code = ex.target_currency
+where e.user_id is not null --TODO: change to user_pseudo_id if needed
   and event_name not in ("app_remove", "os_update", "app_clear_data", "app_update", "app_exception")
   and dt between '{{ start_date }}' and '{{ end_date }}'
 group by 1,2

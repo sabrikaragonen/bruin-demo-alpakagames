@@ -1,7 +1,7 @@
 /* @bruin
 
 name: analytics_504624180.ga4_TechDetails_504624180
-type: bq.sql
+type: bq.source
 description: |
   GA4 tech details report view. Shows device and browser information with engagement metrics.
   View over p_ga4_TechDetails_504624180.

@@ -1,7 +1,7 @@
 /* @bruin
 
 name: analytics_504624180.ga4_Events_504624180
-type: bq.sql
+type: bq.source
 description: |
   GA4 events summary report view. Contains event-level metrics aggregated by event name.
   View over p_ga4_Events_504624180.
